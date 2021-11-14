@@ -30,5 +30,6 @@ Follow either of following ways:
     ```
   
    
-**Running the project** 
+**Running the project**
+
 Use Visual studio or Rider to run the project. Swagger is there to send a request to the `GetNearestLocations` endpoint.
