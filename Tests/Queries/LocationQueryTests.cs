@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Transactions;
 using Microsoft.Extensions.Configuration;
-using Moq;
 using Roamler.Models;
 using Roamler.Queries;
 using Xunit;
