@@ -29,9 +29,6 @@
       <None Update="Scripts\1-InitializeDatabase.sql">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
-      <None Update="Scripts\2-CreateSP.sql">
-        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      </None>
     </ItemGroup>
 
 </Project>
