@@ -1,4 +1,4 @@
-# Roamler's Nearest Neighbor search system
+# Nearest Neighbor search system
 
 This repo contains an implementation for an otimzed Nearest Neighbor locations search system.  
 It heavily relies on [SQL SERVER Spatial Data](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/spatial-data-sql-server) and utilizes [Spatial Indexes](https://docs.microsoft.com/en-us/sql/relational-databases/spatial/create-modify-and-drop-spatial-indexes) for fast searches based on [Bounding box](https://aboutsqlserver.com/2013/09/03/optimizing-sql-server-spatial-queries-with-bounding-box/)  concept.
