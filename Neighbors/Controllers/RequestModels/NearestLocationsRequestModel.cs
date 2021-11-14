@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Roamler.Models;
+using Neighbors.Models;
 
-namespace Roamler.Controllers.RequestModels
+namespace Neighbors.Controllers.RequestModels
 {
     public class NearestLocationsRequestModel
     {

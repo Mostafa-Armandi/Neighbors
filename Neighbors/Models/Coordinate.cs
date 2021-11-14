@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Roamler.Models
+namespace Neighbors.Models
 {
     public class Coordinate
     {

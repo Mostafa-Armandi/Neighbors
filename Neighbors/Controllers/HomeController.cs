@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Roamler.Controllers
+namespace Neighbors.Controllers
 {
     public class HomeController : ControllerBase
     {

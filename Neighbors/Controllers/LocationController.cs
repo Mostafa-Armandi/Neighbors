@@ -2,10 +2,10 @@
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using Roamler.Controllers.RequestModels;
-using Roamler.Queries;
+using Neighbors.Controllers.RequestModels;
+using Neighbors.Queries;
 
-namespace Roamler.Controllers
+namespace Neighbors.Controllers
 {
     [ApiController]
     [Route("[controller]")]

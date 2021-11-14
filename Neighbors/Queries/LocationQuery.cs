@@ -5,9 +5,9 @@ using System.Data.SqlClient;
 using System.Threading.Tasks;
 using Dapper;
 using Microsoft.Extensions.Configuration;
-using Roamler.Models;
+using Neighbors.Models;
 
-namespace Roamler.Queries
+namespace Neighbors.Queries
 {
     public class LocationQuery : ILocationQuery
     {

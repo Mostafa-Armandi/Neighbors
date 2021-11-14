@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using Microsoft.Data.SqlClient;
-using Roamler.Models;
+using Neighbors.Models;
 using ThrowawayDb;
 
 namespace Tests

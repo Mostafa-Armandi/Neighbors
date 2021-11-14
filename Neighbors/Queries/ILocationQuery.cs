@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Roamler.Models;
+using Neighbors.Models;
 
-namespace Roamler.Queries
+namespace Neighbors.Queries
 {
     public interface ILocationQuery
     {

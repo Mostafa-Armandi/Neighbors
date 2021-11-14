@@ -4,9 +4,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Roamler.Queries;
+using Neighbors.Queries;
 
-namespace Roamler
+namespace Neighbors
 {
     public class Startup
     {
@@ -22,7 +22,7 @@ namespace Roamler
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Roamler", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Neighbors", Version = "v1" });
             });
             services.AddSingleton<IConfiguration>(Configuration);
             services.AddScoped<ILocationQuery,LocationQuery>();
@@ -34,7 +34,7 @@ namespace Roamler
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Roamler v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Neighbors v1"));
             }
 
             app.UseHttpsRedirection();

@@ -1,4 +1,4 @@
-﻿namespace Roamler.Models
+﻿namespace Neighbors.Models
 {
     public class Location
     {

@@ -22,7 +22,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Roamler\Roamler.csproj" />
+      <ProjectReference Include="..\Neighbors\Neighbors.csproj" />
     </ItemGroup>
 
     <ItemGroup>

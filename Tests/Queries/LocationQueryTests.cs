@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.Configuration;
-using Roamler.Models;
-using Roamler.Queries;
+using Neighbors.Models;
+using Neighbors.Queries;
 using Xunit;
 
 namespace Tests.Queries
