@@ -18,21 +18,8 @@ namespace Tests
             _database = ThrowawayDatabase.FromLocalInstance("localhost");
 
             Console.WriteLine($"Created database {_database.Name}");
-
-            foreach (var file in System.IO.Directory.EnumerateFiles("Scripts"))
-            {
-                ExecuteBatchNonQuery(File.ReadAllText(file), _database.ConnectionString);
-            }
             
-            
-            // - Apply database migrations here if necessary
-            // - Seed the database with data
-            // - Execute your code against this database
-            using var connection = new SqlConnection(_database.ConnectionString);
-            connection.Open();
-            using var cmd = new SqlCommand("SELECT 1", connection);
-            var result = Convert.ToInt32(cmd.ExecuteScalar());
-            Console.WriteLine(result);
+            ExecuteBatchNonQuery(File.ReadAllText("Scripts/1-InitializeDatabase.sql"), _database.ConnectionString);
         }
         
         private void ExecuteBatchNonQuery(string sql, string connectionString) {

@@ -24,6 +24,7 @@ CREATE TABLE [dbo].[Locations](
     SET NUMERIC_ROUNDABORT OFF
     GO
 
+GO
 
 CREATE SPATIAL INDEX [IX_Coordinate_Spatial] ON [dbo].[Locations]
 (
@@ -33,3 +34,23 @@ WITH (GRIDS =(LEVEL_1 = LOW,LEVEL_2 = LOW,LEVEL_3 = LOW,LEVEL_4 = LOW),
 CELLS_PER_OBJECT = 16, PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, SORT_IN_TEMPDB = OFF, DROP_EXISTING = OFF, ONLINE = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 GO
 
+CREATE PROCEDURE [dbo].[usp_NearestNeighbors]
+(
+    @Latitude float,
+    @Longitude float,
+    @MaxDistance int,
+    @MaxResults int
+)
+AS
+
+DECLARE @g GEOGRAPHY = geography::Point(@Latitude, @Longitude, 4326)
+
+SELECT  [Address] , Coordinate.Lat Latitude, Coordinate.Long Longitude, Coordinate.STDistance(@g) Distance
+FROM [Locations] l
+         INNER JOIN
+     (
+         SELECT TOP(@MaxResults)  Id
+         FROM [Locations]
+         WHERE  Coordinate.STDistance(@g) IS NOT NULL AND Coordinate.STDistance(@g) <= @MaxDistance
+         ORDER BY Coordinate.STDistance(@g)
+     ) d ON d.Id = l.Id
