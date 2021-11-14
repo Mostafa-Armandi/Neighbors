@@ -20,7 +20,7 @@ SQL Server 2019 is used as the database and distance calculation is done using a
 **Database** 
 Follow either of following ways:
 
- 1. Restore a backup from `Database/Roamler.bak` .
+ 1. Restore a backup from `Database/Neighbors.bak` .
 		 This a SQL Server 2019 backup file with pre loaded data fro thesting purposes.
 		 
  2. Execute 2 following file from the path `Tests/Scripts` respectively:
@@ -30,5 +30,6 @@ Follow either of following ways:
     ```
   
    
-**Running the project** 
+**Running the project**
+
 Use Visual studio or Rider to run the project. Swagger is there to send a request to the `GetNearestLocations` endpoint.
