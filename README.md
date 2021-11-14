@@ -33,3 +33,11 @@ Follow either of following ways:
 **Running the project**
 
 Use Visual studio or Rider to run the project. Swagger is there to send a request to the `GetNearestLocations` endpoint.
+
+## Tests
+There are a couple of integration tests on the project which work with a fresh database each.
+The instance of the SQL Server that tests are run against is specified on the `TestFixture.cs` [class](https://github.com/Mostafa-Armandi/Neighbors/blob/master/Tests/TestFixture.cs).  
+It is using a third-party Nuget package to create the database which is configurable: ([Learn more](https://github.com/Zaid-Ajaj/ThrowawayDb))
+
+    _database = ThrowawayDatabase.FromLocalInstance("localhost");
+
