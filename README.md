@@ -18,6 +18,7 @@ SQL Server 2019 is used as the database and distance calculation is done using a
 ## How to get started
 
 **Database** 
+
 Follow either of following ways:
 
  1. Restore a backup from `Database/Neighbors.bak` .
