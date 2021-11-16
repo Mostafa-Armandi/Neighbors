@@ -5,7 +5,7 @@ It heavily relies on [SQL SERVER Spatial Data](https://docs.microsoft.com/en-us/
 
 The distance calculation between locations on SQL Server is done using `STDistance` function which returns the shortest LineString between two geography types.
 
-The underlying algorithm for `STDistance` seems to be the [Vincenty’s inverse solution](http://www.movable-type.co.uk/scripts/latlong-vincenty.html) which is slightly different from the well-know [Harvesine](http://www.movable-type.co.uk/scripts/latlong.html)  approach. They might shows slightly different results on some *Latitude/Longitudes* thoutgh.
+The underlying algorithm for `STDistance` seems to be the [Vincenty’s inverse solution](http://www.movable-type.co.uk/scripts/latlong-vincenty.html) which is slightly different from the well-know [Harvesine](http://www.movable-type.co.uk/scripts/latlong.html)  approach. They might shows slightly different results on some *Latitude/Longitudes*.
 
 A proof checking reference for distance calculation using the implemented approach could be found [here](https://geodesyapps.ga.gov.au/vincenty-inverse).
 
